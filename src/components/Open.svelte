@@ -1,39 +1,47 @@
 <script>
+  import { slide } from 'svelte/transition'
   let list = [
     {
       title: '应用接入',
       intro: ' 实现应用服务注册、发布、接入、授权、管理、使用的全生命周期管理',
-      src: 'assets/img/open_1.png'
+      src: 'assets/img/open_1.png',
+      show: false
     },
     {
       title: '应用接入',
       intro: ' 实现应用服务注册、发布、接入、授权、管理、使用的全生命周期管理',
-      src: 'assets/img/open_2.png'
+      src: 'assets/img/open_2.png',
+      show: false
     },
     {
       title: '应用接入',
       intro: ' 实现应用服务注册、发布、接入、授权、管理、使用的全生命周期管理',
-      src: 'assets/img/open_3.png'
+      src: 'assets/img/open_3.png',
+      show: false
     },
     {
       title: '应用接入',
       intro: ' 实现应用服务注册、发布、接入、授权、管理、使用的全生命周期管理',
-      src: 'assets/img/open_4.png'
+      src: 'assets/img/open_4.png',
+      show: false
     },
     {
       title: '应用接入',
       intro: ' 实现应用服务注册、发布、接入、授权、管理、使用的全生命周期管理',
-      src: 'assets/img/open_5.png'
+      src: 'assets/img/open_5.png',
+      show: false
     },
     {
       title: '应用接入',
       intro: ' 实现应用服务注册、发布、接入、授权、管理、使用的全生命周期管理',
-      src: 'assets/img/open_6.png'
+      src: 'assets/img/open_6.png',
+      show: false
     }
   ]
+  let showItem = false
 </script>
 
-<div class="open">
+<div class="open open_guide">
   <div class="title">为什么选择我们？</div>
   <div class="wrapper">
     <div class="grid">
@@ -126,20 +134,22 @@
   }
   .cover {
     width: 361px;
-    height: 241px;
+    /* height: 241px; */
+    overflow: hidden;
+    height: 0;
     position: absolute;
     background: #0486fe;
-    border-radius: 1px;
     border-radius: 1px;
     text-align: center;
     z-index: 100;
     user-select: none;
     opacity: 0;
-    transform: rotate(-90deg);
-    transform-origin: left top;
+    transition: 0.4s;
   }
   .grid-item:hover .cover {
-    animation: cover 0.6s forwards;
+    opacity: 1;
+    height: 241px;
+    /* animation: cover 0.6s forwards; */
   }
   .cover ul {
     padding: 20px;

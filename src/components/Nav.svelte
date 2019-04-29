@@ -1,5 +1,6 @@
 <script>
   import { navShow } from '../stores.js'
+
   const nav_list = [
     {
       text: '首页',

@@ -19,6 +19,7 @@
     "start:dev": "sirv public --dev"
   },
   "dependencies": {
+    "shepherd.js": "^2.7.0",
     "swiper": "^4.5.0"
   }
 }
